@@ -14,19 +14,18 @@ A modern, minimalist, and aesthetic e-commerce platform built with Next.js 14 (A
 
 ```
 SenShop/
-├── senshop-app/           # Next.js frontend
-│   ├── src/
-│   │   ├── app/           # App Router pages
-│   │   ├── components/    # UI components
-│   │   ├── hooks/         # Custom React hooks
-│   │   ├── lib/           # Utility functions
-│   │   └── services/      # API services
-│   ├── public/            # Static assets
+├── src/                # Frontend source code
+│   ├── app/            # App Router pages
+│   ├── components/     # UI components
+│   ├── hooks/          # Custom React hooks
+│   ├── lib/            # Utility functions
+│   └── services/       # API services
+├── public/             # Static assets
+├── senshop-backend/    # Medusa.js backend
+│   ├── src/            # Backend source code
+│   ├── medusa-config.ts # Medusa configuration
 │   └── ...
-└── senshop-backend/       # Medusa.js backend
-    ├── src/               # Backend source code
-    ├── medusa-config.ts   # Medusa configuration
-    └── ...
+└── ...                 # Configuration files
 ```
 
 ## Getting Started
@@ -39,23 +38,18 @@ SenShop/
 
 ### Frontend Setup
 
-1. Navigate to the frontend directory:
-   ```bash
-   cd senshop-app
-   ```
-
-2. Install dependencies:
+1. Install dependencies:
    ```bash
    npm install
    ```
 
-3. Create a `.env.local` file with the following configuration:
+2. Create a `.env.local` file with the following configuration:
    ```
    NEXT_PUBLIC_MEDUSA_BACKEND_URL=http://localhost:9000
    NEXT_PUBLIC_STRIPE_KEY=your_stripe_public_key
    ```
 
-4. Start the development server:
+3. Start the development server:
    ```bash
    npm run dev
    ```
